@@ -84,7 +84,7 @@ document.getElementById("Button").onclick = function() {
       charCard.innerHTML = `
           <h2> ${removedE[0].name}</h2>
           <img src=${removedE[0].picture} alt="">
-          <p> ${removedE[0].time}, ${removedE[0].sets}</p>
+          <p> ${removedE[0].time}s, reps: ${removedE[0].reps}, ${removedE[0].sets}</p>
       `
       //   
       cardContainer.appendChild(charCard)
@@ -109,7 +109,7 @@ document.getElementById("Button").onclick = function() {
           charCard.innerHTML = `
             <h2> ${removedE[0].name}</h2>
             <img src=${removedE[0].picture} alt="">
-            <p> ${removedE[0].time}, 1 set</p>
+            <p> ${removedE[0].time}s, ${removedE[0].reps} 1 set</p>
           `
           
       //   what does this do again?
