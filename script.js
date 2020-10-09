@@ -6,6 +6,7 @@ const cardChoiceContainer = document.querySelector('#card-choice-container')
 
 const hudContainer = document.querySelector('.hud-container')
 const hudTimer = document.querySelector('.hud-timer-box')
+const hudRestTimer = document.querySelector('.hud-rester')
 const boxOverlay = document.querySelector('.box-overlay')
 const closeButt = document.querySelector('.closeButt')
 const restButt = document.querySelector('.restButt')
@@ -188,6 +189,16 @@ function setTimer(timer){
     closeButt.onclick = function(){
       hudContainer.classList.remove('show')
       clearInterval(x)
+    }
+    restButt.onclick = function(){
+      
+      let restTimer = 11
+      hudRestTimer.innerHTML = `${restTimer} secs of rest, ++air ++water`
+      setTimeout(() => {  console.log("REST DONE"); }, 1000);
+      timer =+ 1
+      restTimer--
+
+
     }
     hudTimer.innerHTML = `${timer} sec`
     if (timer <= 0 ){

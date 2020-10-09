@@ -46,7 +46,7 @@ export default
     },
     {
       "name" : "Plank",
-      "picture" : "https://media-exp1.licdn.com/dms/image/C4E03AQF80BT0kV5Rlg/profile-displayphoto-shrink_400_400/0?e=1601510400&v=beta&t=HWx0WE065Y7tIb9TycVTSJQwR86bpX2muax1EqOl_Ss",     
+      "picture" : "https://scontent-ort2-1.cdninstagram.com/v/t51.2885-19/s320x320/47211562_2353148181380260_3417561131613421568_n.jpg?_nc_ht=scontent-ort2-1.cdninstagram.com&_nc_ohc=GmcpxzOvohIAX8AOwXp&oh=fa16824d2ce2ed8b68901d24b0bc1f3d&oe=5FAA2BB1",     
       "reps" : null,
       "time" : 60,
       "sets" : 2

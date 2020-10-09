@@ -118,6 +118,11 @@ body {
 }
 .hud-timer-box{
   color: white;
+  height: 50%;
+  width: 50%;
+  font-size: 10vw;
+  justify-content: center;
+  align-content:center;
 }
 .box-overlay{
   width: 69%;

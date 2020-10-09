@@ -12,6 +12,10 @@ display the card name and picture
 the cards are clickable togglebuttons
 
 
+HOW TO:
+random order
+if card was recently played out (last three), skip until the spacing.  
+
 main menu:
 instructions
 mascot brand appearances 
