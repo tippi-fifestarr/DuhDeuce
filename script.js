@@ -10,6 +10,7 @@ const hudRestTimer = document.querySelector('.hud-rester')
 const boxOverlay = document.querySelector('.box-overlay')
 const closeButt = document.querySelector('.closeButt')
 const restButt = document.querySelector('.restButt')
+let restTimer = 11
 
 
 const colorsArr = ['red', 'blue', 'green', 'orange', 'purple', 'white']
@@ -70,7 +71,7 @@ document.getElementById("Button").onclick = function() {
         setTimer(removedE[0].time)
         
         charCard.classList.toggle("hidden");
-        isChosen ? null : isChosenFunc(e)
+        // isChosen ? null : isChosenFunc(e)
         
       }
       // give mj doubleclick
@@ -191,13 +192,14 @@ function setTimer(timer){
       clearInterval(x)
     }
     restButt.onclick = function(){
-      
-      let restTimer = 11
-      hudRestTimer.innerHTML = `${restTimer} secs of rest, ++air ++water`
-      setTimeout(() => {  console.log("REST DONE"); }, 1000);
-      timer =+ 1
-      restTimer--
-
+      // let restTimer = 11
+      // what this botton does: onclick pause the timer
+      setTimeout(() => {  
+        console.log("REST DONE"); 
+        timer =+ 1
+        restTimer--
+        hudRestTimer.innerHTML = `${restTimer} secs of rest, ++air ++water`
+      }, 1000);
 
     }
     hudTimer.innerHTML = `${timer} sec`
@@ -206,7 +208,7 @@ function setTimer(timer){
       hudTimer.innerHTML = `you win`
       if (timer <= -5){
       hudTimer.innerHTML = `you won already go do another`  
-    clearInterval(x)  
+      clearInterval(x)  
     }
     } else{
       timer--
@@ -214,6 +216,7 @@ function setTimer(timer){
   }, 1000)
 }
 function togOverlay(){
+  console.log('YEP')
   // the essence of setOverlay without the ifs
   hudContainer.classList.add('show')
 }
