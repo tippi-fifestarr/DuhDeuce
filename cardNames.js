@@ -77,11 +77,17 @@ export default
     // },
     {
       "name" : "Lunches",
-      "picture" : "./gifs/lunches.gif"
+      "picture" : "./gifs/lunches.gif",
+      "reps" : 25,
+      "time" : null,
+      "sets" : 2
     },
     {
       "name" : "DaDeucer",
-      "picture" : "./images/dalogo.jpg"
+      "picture" : "./images/dalogo.jpg",
+      "sets" : 2,
+      "time" : null,
+      "reps" : 2
     },
     // {
     //   "name" : "Chicago River",
