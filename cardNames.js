@@ -46,7 +46,10 @@ export default
     },
     {
       "name" : "Plank",
-      "picture" : "https://media-exp1.licdn.com/dms/image/C4E03AQF80BT0kV5Rlg/profile-displayphoto-shrink_400_400/0?e=1601510400&v=beta&t=HWx0WE065Y7tIb9TycVTSJQwR86bpX2muax1EqOl_Ss"     
+      "picture" : "https://media-exp1.licdn.com/dms/image/C4E03AQF80BT0kV5Rlg/profile-displayphoto-shrink_400_400/0?e=1601510400&v=beta&t=HWx0WE065Y7tIb9TycVTSJQwR86bpX2muax1EqOl_Ss",     
+      "reps" : null,
+      "time" : 60,
+      "sets" : 2
     },
     // {
     //   "name" : "Alex Kerr",
