@@ -11,6 +11,19 @@ who's turn is it?
 display the card name and picture
 the cards are clickable togglebuttons
 
+欢迎来到dadeuce版本1.8.
+我们现在有16任务卡
+放到桌面上
+
+15:25 / 1:02:25
+screenshot
+
+0 click the page
+1 how to play / play now ->4
+2 instructions
+3 press this button to "shuffle" a card onto the table [[]]
+4 button and table
+
 
 HOW TO:
 random order
