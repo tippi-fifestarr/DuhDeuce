@@ -4,11 +4,13 @@ let cardsArrTwin = [cardsArr];
 const cardContainer = document.querySelector('#cards-container');
 const cardChoiceContainer = document.querySelector('#card-choice-container')
 
+// necessary variables for the HUD Popup
 const hudContainer = document.querySelector('.hud-container')
 const hudTimer = document.querySelector('.hud-timer-box')
 const hudRestTimer = document.querySelector('.hud-rester')
-const boxOverlay = document.querySelector('.box-overlay')
 const closeButt = document.querySelector('.closeButt')
+
+const boxOverlay = document.querySelector('.box-overlay')
 const restButt = document.querySelector('.restButt')
 let restTimer = 11
 
@@ -18,6 +20,8 @@ let isChosen = false;
 let twinmode = false;
 let chosenCard;
 let fadeTop = "m3-animate-top";
+
+// timer
 let timer = 0;
 
 
