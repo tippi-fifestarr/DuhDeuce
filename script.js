@@ -14,6 +14,7 @@ const boxOverlay = document.querySelector('.box-overlay')
 const restButt = document.querySelector('.restButt')
 let restTimer = 11
 
+let intensityX = .369
 
 const colorsArr = ['red', 'blue', 'green', 'orange', 'purple', 'white']
 let isChosen = false;
@@ -71,6 +72,7 @@ document.getElementById("Button").onclick = function() {
       charCard.id = `${removedE[0].name}`
       // make the card flippable (using css )
       charCard.onclick = function(e){       
+        console.log("yo")
         togOverlay()
         setTimer(removedE[0].time)
         
@@ -80,7 +82,7 @@ document.getElementById("Button").onclick = function() {
       }
       // give mj doubleclick
       charCard.ondblclick = function(e){
-        console.log('dblclicked')
+        console.log("dblclicked")
         // if chosen is true than null, if chosen is false then :
         // isChosen ? null : isChosenFunc(e)
       }
@@ -100,8 +102,12 @@ document.getElementById("Button").onclick = function() {
       var optionsE = Math.floor(Math.random() * cardsArr.cards.length);
       var removedE = cardsArr.cards.splice(optionsE, 1);
       // console.log("REMOVED", removedE)
+      console.log(intensityX)
+      removedE[0].reps = removedE[0].reps*intensityX
       for(var i = 0; i < removedE[0].sets; i++){
         const charCard = document.createElement("div");
+        
+        // charCard.reps = charCard.reps*.87;
           charCard.classList.add("card")
           // charCard.classList.add(fadeTop)
           // https://www.w3schools.com/w3css/w3css_animate.asp
@@ -110,12 +116,18 @@ document.getElementById("Button").onclick = function() {
           // if sets =>1 -1 sets, but copy and rename reshuffle the modified card back into the deck.
           charCard.onclick = function(e){
             charCard.classList.toggle("hidden");
-            isChosen ? null : isChosenFunc(e)
-          }
+            // ternary in google, maybe apply to the other thing
+
+            isChosen ? null : 
+              // isChosenFunc(e)
+                isChosen = true
+                showOverlay()
+            // e is event, e.target, everything has an e.  
+          
           charCard.innerHTML = `
-            <h2> ${removedE[0].name}</h2>
+            <p> ${removedE[0].name}</p>
             <img src=${removedE[0].picture} alt="">
-            <p> ${removedE[0].time}s, ${removedE[0].reps} 1 set</p>
+            <h2> ${removedE[0].time}s, ${removedE[0].reps} 1 set</p>
           `
           
       //   what does this do again?
@@ -161,11 +173,12 @@ document.getElementById("twin").onclick = function(){
   } 
 }
 
-
+// fixing this , out of scope!?  try  
 const isChosenFunc = (e) => {
-  let chosenCardElement;
-  console.log("you chose", e.path[1].id)
-  chosenCard = e.path[1].id
+  let chosenCardElement = charCard;
+  console.log(chosenCardElement.path)
+  // console.log("you chose", .path[1].id)
+  chosenCard = removedE.path[1].id
 
   console.log(cardsArr)
   //loop over cardsArr
@@ -223,4 +236,10 @@ function togOverlay(){
   console.log('YEP')
   // the essence of setOverlay without the ifs
   hudContainer.classList.add('show')
+}
+function showOverlay(){
+  console.log('So')
+  // the essence of setOverlay without the ifs
+  hudContainer.classList.add('show')
+  
 }

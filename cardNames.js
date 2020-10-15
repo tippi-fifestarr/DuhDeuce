@@ -66,6 +66,13 @@ export default
       "time" : null,
       "sets" : 2
     },
+    {
+    "name" : "rouran gong 柔然？功",
+    "picture" : "./gifs/ezgif-氣功教學 -柔軟功.gif",
+    "reps" : 2,
+    "time" : 2,
+    "sets" : 1
+  },
     // {
     //   "name" : "Stan 19/05/17",
     //   "picture" : "./images/stan20190517.jpg",
